@@ -29,8 +29,7 @@ public class Layer {
         errors = Matrix.dotProduct(Matrix.transpose(nextLayerWeights), nextLayerErrors);
     }
 
-    public void correctWeights(Matrix previousLayerNeurons, double learningRate) {
-        //calculate the delta weights 
+    public void correctWeightsAndBiases(Matrix previousLayerNeurons, double learningRate) {
         //dw = dot product of (lr * error * derivative of sigmoid of neurons) and (previous layer neurons transposed)
         Matrix gradient = neurons.derivativeOfSigmoid();
         gradient.hadamardMultiply(errors);
