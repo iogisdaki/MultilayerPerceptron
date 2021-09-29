@@ -22,9 +22,6 @@ public class Layer {
     public void calculateNeurons(Matrix previousLayerNeurons) {
         neurons = Matrix.dotProduct(weights, previousLayerNeurons);
         neurons.add(biases);
-        //TODO
-        //abstract
-        //restrictions
         neurons.passThroughSigmoid();
     }
 
