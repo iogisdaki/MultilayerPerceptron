@@ -47,6 +47,6 @@ public class VanillaNeuralNetwork {
 				layers[i].calculateErrors(layers[i + 1].getWeights(), layers[i + 1].getErrors());
 
 		for (int i = numberOfLayers - 1; i > 0; i--)
-			layers[i].correctWeights(layers[i - 1].getNeurons(), learningRate);
+			layers[i].correctWeightsAndBiases(layers[i - 1].getNeurons(), learningRate);
 	}
 }
