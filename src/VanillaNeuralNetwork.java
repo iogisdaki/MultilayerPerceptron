@@ -37,7 +37,6 @@ public class VanillaNeuralNetwork {
 
 		Matrix targets = Matrix.fromArray(targetArray);
 
-		//feedforward to calculate the values of the neurons of each layer for the givan input
 		this.feedforward(inputArray);
 
 		for (int i = numberOfLayers - 1; i > 0; i--)
